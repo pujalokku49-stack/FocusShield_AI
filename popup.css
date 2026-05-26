@@ -1,0 +1,149 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #f8fafc;
+  --accent: #38bdf8;
+  --muted: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  width: 320px;
+  padding: 16px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+p {
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+
+button {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #0f172a;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.95;
+}
+
+button.secondary {
+  width: auto;
+  padding: 10px 16px;
+  background: transparent;
+  border: 1px solid rgba(56, 189, 248, 0.8);
+  color: var(--accent);
+}
+
+.blocklist-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.status,
+.notes,
+.blocklist {
+  margin-top: 16px;
+}
+
+.status span {
+  font-weight: 700;
+  color: #a5f3fc;
+}
+
+.notes label,
+.blocklist label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+textarea,
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  border-radius: 10px;
+  background: #0b1120;
+  color: var(--text);
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.blocklist-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.blocklist-header label {
+  margin-bottom: 4px;
+}
+
+.hint {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+#siteInput {
+  margin-top: 10px;
+}
+
+#blocklistItems {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+#blocklistItems li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 10px;
+  background: #111827;
+}
+
+#blocklistItems li button {
+  width: auto;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.footer {
+  margin-top: 18px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+}

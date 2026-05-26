@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "FocusShield AI",
+  "description": "A simple browser extension for managing distraction blockers and focus tools.",
+  "version": "1.0.0",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "FocusShield AI",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["blocker.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

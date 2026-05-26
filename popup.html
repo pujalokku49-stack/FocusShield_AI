@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocusShield AI</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>FocusShield AI</h1>
+    <p>Enable focus mode to reduce distractions.</p>
+
+    <button id="toggleFocus">Enable Focus Mode</button>
+    <div class="status">
+      <p>Status: <span id="statusText">Inactive</span></p>
+    </div>
+
+    <div class="notes">
+      <label for="noteInput">Quick note</label>
+      <textarea id="noteInput" placeholder="Write a focus reminder..."></textarea>
+      <button id="saveNote">Save Note</button>
+    </div>
+
+    <div class="blocklist">
+      <div class="blocklist-header">
+        <div>
+          <label for="siteInput">Custom blocklist</label>
+          <p class="hint">Enter domains like youtube.com or tiktok.com</p>
+        </div>
+        <div class="blocklist-actions">
+          <button id="addSite" class="secondary">Add</button>
+          <button id="resetBlocklist" class="secondary">Reset</button>
+        </div>
+      </div>
+
+      <input id="siteInput" type="text" placeholder="Add a site to block" />
+      <ul id="blocklistItems"></ul>
+    </div>
+
+    <div class="footer">
+      <small>Built for FocusShield-AI</small>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
